@@ -12,6 +12,7 @@
 		92508F811F714A23008FDEB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92508F7F1F714A23008FDEB1 /* Main.storyboard */; };
 		92508F831F714A23008FDEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92508F821F714A23008FDEB1 /* Assets.xcassets */; };
 		92508F861F714A23008FDEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92508F841F714A23008FDEB1 /* LaunchScreen.storyboard */; };
+		92508F8F1F714F12008FDEB1 /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92508F8E1F714F12008FDEB1 /* Morning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		92508F821F714A23008FDEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92508F851F714A23008FDEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92508F871F714A23008FDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92508F8E1F714F12008FDEB1 /* Morning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Morning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +56,21 @@
 		92508F7A1F714A23008FDEB1 /* Morning */ = {
 			isa = PBXGroup;
 			children = (
+				92508F8D1F714EFF008FDEB1 /* Morning */,
 				92508F7B1F714A23008FDEB1 /* AppDelegate.swift */,
 				92508F7D1F714A23008FDEB1 /* ViewController.swift */,
 				92508F7F1F714A23008FDEB1 /* Main.storyboard */,
 				92508F821F714A23008FDEB1 /* Assets.xcassets */,
 				92508F841F714A23008FDEB1 /* LaunchScreen.storyboard */,
 				92508F871F714A23008FDEB1 /* Info.plist */,
+			);
+			path = Morning;
+			sourceTree = "<group>";
+		};
+		92508F8D1F714EFF008FDEB1 /* Morning */ = {
+			isa = PBXGroup;
+			children = (
+				92508F8E1F714F12008FDEB1 /* Morning.swift */,
 			);
 			path = Morning;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92508F7E1F714A23008FDEB1 /* ViewController.swift in Sources */,
+				92508F8F1F714F12008FDEB1 /* Morning.swift in Sources */,
 				92508F7C1F714A23008FDEB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +316,7 @@
 				92508F8C1F714A23008FDEB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
