@@ -6,4 +6,8 @@
 //  Copyright © 2017年 zysios. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Morning: UIView {
+    
+}
