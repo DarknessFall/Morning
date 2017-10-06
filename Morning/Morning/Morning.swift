@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol MorningAlert {
+    func show()
+    func dismiss()
+}
+
 class Morning: UIView {
-    
+
 }
