@@ -10,25 +10,40 @@ import UIKit
 
 typealias MorningHandler = (Bool) -> ()
 
-class MorningAlert: UIView {
-
-    var contentView: UIView = UIView()
+class Morning: UIView {
 
     var dismissOnTouchOutside = true
 
-    ///Init Methods
+    private(set) var contentView: UIView = UIView(frame: .zero)
+
+    private var containerView = UIView(frame: .zero)
+    private var shadowView = UIView(frame: .zero)
+
+    //MARK: Init Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
 
+        backgroundColor = .clear
 
+        addSubview(containerView)
+        containerView.addSubview(shadowView)
+        containerView.addSubview(contentView)
+
+        containerView.addObserver(self, forKeyPath: "frame", context: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    ///Public Methods
-    func show(inView view: UIView = UIApplication.shared.keyWindow!) {
+    //MARK: Deinit
+    deinit {
+        containerView.removeObserver(self, forKeyPath: "frame")
+        removeObserver(self, forKeyPath: "frame")
+    }
+
+    //MARK: Public Methods
+    func show(inView view: UIView) {
         view.addSubview(self)
 
         frame = view.bounds
@@ -40,26 +55,43 @@ class MorningAlert: UIView {
     }
 
     func dismiss() {
+        guard superview != nil else {
+            return
+        }
 
+        superview!.removeObserver(self, forKeyPath: "frame")
+        removeFromSuperview()
     }
 
 }
 
-///MARK: KVO
-extension MorningAlert {
+//MARK: KVO
+extension Morning {
 
     override func observeValue(forKeyPath keyPath: String?,
                                of object: Any?,
                                change: [NSKeyValueChangeKey : Any]?,
                                context: UnsafeMutableRawPointer?) {
-        if keyPath == "frame" {
+        guard keyPath == "frame" else {
+            return
+        }
+
+        guard let theView = object as? UIView else {
+            return
+        }
+
+        if theView == containerView {
+            shadowView.frame = containerView.bounds
+            contentView.frame = containerView.bounds
+        } else if theView == self {
             frame = superview!.bounds
         }
     }
 
 }
 
-private extension MorningAlert {
+//MARK: Touch Event
+private extension Morning {
 
     @objc func tapped(tapGestureRecognizer: UITapGestureRecognizer) {
         guard dismissOnTouchOutside else {

@@ -13,6 +13,8 @@
 		92508F831F714A23008FDEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92508F821F714A23008FDEB1 /* Assets.xcassets */; };
 		92508F861F714A23008FDEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92508F841F714A23008FDEB1 /* LaunchScreen.storyboard */; };
 		92508F8F1F714F12008FDEB1 /* Morning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92508F8E1F714F12008FDEB1 /* Morning.swift */; };
+		D70E33157E4AAA3BE49F3717 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E3A70FC2143F0DD637E43 /* Alert.swift */; };
+		D70E358F89D4600237CC0AFC /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70E39E1814B2827D04575CF /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		92508F851F714A23008FDEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92508F871F714A23008FDEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92508F8E1F714F12008FDEB1 /* Morning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Morning.swift; sourceTree = "<group>"; };
+		D70E39E1814B2827D04575CF /* Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		D70E3A70FC2143F0DD637E43 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				92508F8E1F714F12008FDEB1 /* Morning.swift */,
+				D70E39E1814B2827D04575CF /* Loading.swift */,
+				D70E3A70FC2143F0DD637E43 /* Alert.swift */,
 			);
 			path = Morning;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 				92508F7E1F714A23008FDEB1 /* ViewController.swift in Sources */,
 				92508F8F1F714F12008FDEB1 /* Morning.swift in Sources */,
 				92508F7C1F714A23008FDEB1 /* AppDelegate.swift in Sources */,
+				D70E358F89D4600237CC0AFC /* Loading.swift in Sources */,
+				D70E33157E4AAA3BE49F3717 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
